@@ -68,6 +68,10 @@ body {
     transition: 0.5s;
 }
 
+img.soundcloud {
+    border-radius: 4px;
+}
+
 .profile h1, .profile h2, .section h1 {
     color:rgb(78, 78, 78);
 }
@@ -103,7 +107,7 @@ body {
 /* animation */
 .fadeIn {
     animation-name: fadeInAnime;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
