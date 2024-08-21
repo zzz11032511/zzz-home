@@ -1,0 +1,33 @@
+.icon-container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+
+  padding: 5px 5px 5px 5px;
+
+  width: 50px;
+  transition: width 0.3s ease;
+
+  background-color: antiquewhite;
+  border-radius: 25px;
+}
+
+.icon-text {
+  margin-left: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-container:hover .icon-wrapper {
+  width: 100px;
+}
+
+.icon-container:hover .icon-text {
+  opacity: 1;
+}
