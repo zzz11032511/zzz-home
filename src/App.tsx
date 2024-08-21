@@ -24,7 +24,7 @@ function App() {
         ></StretchingIcon>
         <StretchingIcon
           src="/favicon.ico"
-          text="Sample3"
+          text="Sample312312341234"
         ></StretchingIcon>
       </div>
     </div>
