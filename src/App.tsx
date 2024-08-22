@@ -1,6 +1,6 @@
 import './App.css'
 import Icon from './components/Icon'
-import StretchingIcon from './components/StretchingIcon'
+import ProfileLinkList from './components/ProfileLinkList'
 
 function App() {
   return (
@@ -13,20 +13,8 @@ function App() {
         width="150px"
       />
       <h1>zzz' home</h1>
-      <div>
-        <StretchingIcon
-          src="/favicon.ico"
-          text="Sample1"
-        ></StretchingIcon>
-        <StretchingIcon
-          src="/favicon.ico"
-          text="Sample2"
-        ></StretchingIcon>
-        <StretchingIcon
-          src="/favicon.ico"
-          text="Sample312312341234"
-        ></StretchingIcon>
-      </div>
+      <h3>↓ Click the icon to explore more information. ↓</h3>
+      <ProfileLinkList />
     </div>
   )
 }

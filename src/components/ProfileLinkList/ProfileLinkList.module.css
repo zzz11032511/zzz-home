@@ -1,0 +1,12 @@
+.link-list {
+  display: flex;
+  gap: 10px;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .link-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
