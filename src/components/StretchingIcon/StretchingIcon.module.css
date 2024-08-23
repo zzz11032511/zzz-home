@@ -8,10 +8,8 @@
   flex-direction: row;
   align-items: center;
 
-  background-color: antiquewhite;
   padding: 5px;
 
-  transition: width 0.3s ease;
   cursor: pointer;
 }
 
@@ -19,7 +17,6 @@
   padding: 0px 10px 0px 10px;
   white-space: nowrap;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .icon-container:hover .icon-text {

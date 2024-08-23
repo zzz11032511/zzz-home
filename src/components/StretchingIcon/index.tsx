@@ -1,7 +1,7 @@
 import Icon from '../Icon'
 import clsx from 'clsx'
 import styles from './StretchingIcon.module.css'
-import { useState, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 const sizeConfig = {
   small: {
@@ -24,7 +24,7 @@ const sizeConfig = {
     iconWidth: 70,
     textSize: 30,
     wrapperStyle: {
-      width: '50px',
+      width: '70px',
       borderRadius: '40px',
     },
   },
@@ -34,47 +34,43 @@ type StretchingIconProps = {
   src: string
   text: string
   size?: 'small' | 'medium' | 'large'
+  animationDuration?: string
+  Color?: string
+  backgroundColor?: string
 }
 
 function StretchingIcon(props: StretchingIconProps) {
   const config = sizeConfig[props.size || 'medium']
 
-  const [width, setWidth] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
   const elementRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLSpanElement>(null)
 
   const handleMouseEnter = () => {
-    setIsHovered(true)
-    if (elementRef.current) {
-      elementRef.current.style.width = `${width + config.iconWidth}px`
+    if (textRef.current && elementRef.current) {
+      const newWidth = textRef.current.offsetWidth + config.iconWidth
+      elementRef.current.style.width = `${newWidth}px`
     }
   }
 
   const handleMouseLeave = () => {
-    setIsHovered(false)
     if (elementRef.current) {
-      elementRef.current.style.width = `${config.iconWidth}px`
+      const newWidth = config.iconWidth
+      elementRef.current.style.width = `${newWidth}px`
     }
   }
-
-  useEffect(() => {
-    if (textRef.current) {
-      setWidth(textRef.current.offsetWidth)
-    }
-  }, [])
 
   return (
     <div className={clsx(styles['icon-container'])}>
       <div
         ref={elementRef}
         className={clsx(styles['icon-wrapper'])}
-        onClick={() => {
-          console.log(width)
-        }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={config.wrapperStyle}
+        style={{
+          ...config.wrapperStyle,
+          backgroundColor: props.backgroundColor || 'white',
+          transition: `width ${props.animationDuration || '0.3s'} ease`,
+        }}
       >
         <Icon
           src={props.src}
@@ -85,9 +81,10 @@ function StretchingIcon(props: StretchingIconProps) {
           ref={textRef}
           className={clsx(styles['icon-text'])}
           style={{
+            color: props.Color || 'black',
             fontSize: config.textSize,
-            fontFamily: 'Josefin Sans',
-            fontWeight: '700',
+            fontWeight: 'bold',
+            transition: `opacity ${props.animationDuration || '0.3s'} ease`,
           }}
         >
           {props.text}
