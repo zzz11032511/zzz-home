@@ -13,8 +13,10 @@ function App() {
         width="150px"
       />
       <h1>zzz' home</h1>
-      <h3>↓ Click the icon to explore more information. ↓</h3>
-      <ProfileLinkList />
+      <div>
+        <h3>↓ Click the icon to explore more information. ↓</h3>
+        <ProfileLinkList />
+      </div>
     </div>
   )
 }

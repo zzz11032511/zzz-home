@@ -34,9 +34,12 @@ type StretchingIconProps = {
   src: string
   text: string
   size?: 'small' | 'medium' | 'large'
+  stretch?: boolean
+  width?: string
   animationDuration?: string
   Color?: string
   backgroundColor?: string
+  href?: string
 }
 
 function StretchingIcon(props: StretchingIconProps) {
@@ -59,8 +62,48 @@ function StretchingIcon(props: StretchingIconProps) {
     }
   }
 
+  if (!props.stretch) {
+    return (
+      <a
+        className={clsx(styles['icon-container'])}
+        href={props.href}
+        style={{ textDecorationLine: 'none' }}
+      >
+        <div
+          className={clsx(styles['icon-wrapper'])}
+          style={{
+            ...config.wrapperStyle,
+            backgroundColor: props.backgroundColor || 'white',
+            width: props.width || `${config.iconWidth}px`,
+          }}
+        >
+          <Icon
+            src={props.src}
+            trim="round"
+            width={`${config.iconWidth}px`}
+          />
+          <span
+            className={clsx(styles['icon-text'])}
+            style={{
+              color: props.Color || 'black',
+              fontSize: config.textSize,
+              opacity: 1,
+              fontWeight: 'bold',
+            }}
+          >
+            {props.text}
+          </span>
+        </div>
+      </a>
+    )
+  }
+
   return (
-    <div className={clsx(styles['icon-container'])}>
+    <a
+      className={clsx(styles['icon-container'])}
+      href={props.href}
+      style={{ textDecorationLine: 'none' }}
+    >
       <div
         ref={elementRef}
         className={clsx(styles['icon-wrapper'])}
@@ -90,7 +133,7 @@ function StretchingIcon(props: StretchingIconProps) {
           {props.text}
         </span>
       </div>
-    </div>
+    </a>
   )
 }
 
