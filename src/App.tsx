@@ -1,6 +1,6 @@
-import './App.css'
-import Icon from './components/Icon'
 import ProfileLinkList from './components/ProfileLinkList'
+import Icon from './components/Icon'
+import './App.css'
 
 function App() {
   return (
@@ -21,9 +21,7 @@ function App() {
           <ProfileLinkList />
         </div>
       </main>
-      <footer>
-        <p>© 2024 zzz</p>
-      </footer>
+
     </div>
   )
 }

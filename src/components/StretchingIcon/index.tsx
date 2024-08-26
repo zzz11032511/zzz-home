@@ -1,7 +1,8 @@
+import styles from './StretchingIcon.module.css'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 import Icon from '../Icon'
 import clsx from 'clsx'
-import styles from './StretchingIcon.module.css'
-import { useRef } from 'react'
 
 const sizeConfig = {
   small: {
@@ -39,7 +40,7 @@ type StretchingIconProps = {
   animationDuration?: string
   Color?: string
   backgroundColor?: string
-  href?: string
+  href: string
 }
 
 function StretchingIcon(props: StretchingIconProps) {
@@ -64,9 +65,9 @@ function StretchingIcon(props: StretchingIconProps) {
 
   if (!props.stretch) {
     return (
-      <a
+      <Link
         className={clsx(styles['icon-container'])}
-        href={props.href}
+        to={props.href}
         style={{ textDecorationLine: 'none' }}
       >
         <div
@@ -94,14 +95,14 @@ function StretchingIcon(props: StretchingIconProps) {
             {props.text}
           </span>
         </div>
-      </a>
+      </Link>
     )
   }
 
   return (
-    <a
+    <Link
       className={clsx(styles['icon-container'])}
-      href={props.href}
+      to={props.href}
       style={{ textDecorationLine: 'none' }}
     >
       <div
@@ -133,7 +134,7 @@ function StretchingIcon(props: StretchingIconProps) {
           {props.text}
         </span>
       </div>
-    </a>
+    </Link>
   )
 }
 

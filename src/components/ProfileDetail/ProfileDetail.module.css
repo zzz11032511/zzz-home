@@ -1,0 +1,24 @@
+.profile-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.profile-detail-wrapper {
+    text-align: left;
+    min-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .profile-detail-wrapper {
+        text-align: left;
+        min-width: 500px;
+    }
+}

@@ -1,8 +1,8 @@
-import clsx from 'clsx'
 import styles from './ProfileLinkList.module.css'
+import clsx from 'clsx'
 
-import StretchingIcon from '../StretchingIcon'
 import { useWindowSize } from '../../utils/hooks/useWindowSize'
+import StretchingIcon from '../StretchingIcon'
 
 const profileLinkTemplate = [
   {
@@ -15,7 +15,7 @@ const profileLinkTemplate = [
   {
     src: '/favicon.ico',
     text: 'Blog',
-    href: 'https://zzz-blog.netlify.app/',
+    href: 'https://zzz-blog.netlify.app',
     backgroundColor: '#fff4e8',
     color: '#000000',
   },
@@ -24,13 +24,6 @@ const profileLinkTemplate = [
     text: 'Works',
     href: '/works',
     backgroundColor: '#fdffe8',
-    color: '#000000',
-  },
-  {
-    src: '/favicon.ico',
-    text: 'Skills',
-    href: '/skills',
-    backgroundColor: '#eeffe8',
     color: '#000000',
   },
   {

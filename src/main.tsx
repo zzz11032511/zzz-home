@@ -1,9 +1,9 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ProfileDetail from './components/ProfileDetail/index.tsx'
+import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
 import App from './App.tsx'
 import './global.css'
-import Individual from './page/individual/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -12,32 +12,31 @@ const router = createBrowserRouter([
   },
   {
     path: '/about',
-    element: <Individual text="About" />,
+    element: <ProfileDetail path="/about" />,
   },
   {
     path: '/works',
-    element: <Individual text="Works" />,
-  },
-  {
-    path: '/skills',
-    element: <Individual text="Skills" />,
+    element: <ProfileDetail path="/works" />,
   },
   {
     path: '/hobbies',
-    element: <Individual text="Hobbies" />,
+    element: <ProfileDetail path="/hobbies" />,
   },
   {
     path: '/links',
-    element: <Individual text="Links" />,
+    element: <ProfileDetail path="/links" />,
   },
   {
     path: '/contact',
-    element: <Individual text="Contact" />,
+    element: <ProfileDetail path="/contact" />,
   },
 ])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <footer>
+      <p>© 2024 zzz</p>
+    </footer>
   </StrictMode>,
 )
