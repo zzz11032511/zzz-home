@@ -1,24 +1,21 @@
 .profile-detail {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 700px;
 }
 
 .profile-detail-wrapper {
-    text-align: left;
-    min-width: 600px;
+  text-align: left;
+  min-width: 600px;
 }
 
 @media screen and (max-width: 768px) {
-    .profile-detail {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+  .profile-detail {
+    max-width: 600px;
+  }
 
-    .profile-detail-wrapper {
-        text-align: left;
-        min-width: 500px;
-    }
+  .profile-detail-wrapper {
+    min-width: 500px;
+  }
 }

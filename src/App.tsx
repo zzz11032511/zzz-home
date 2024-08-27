@@ -23,11 +23,10 @@ function App() {
           <h1>zzz' home</h1>
         </div>
         <div className="link-list">
-          <h3>{ infoText }</h3>
+          <h3>{infoText}</h3>
           <ProfileLinkList />
         </div>
       </main>
-
     </div>
   )
 }
