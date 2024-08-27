@@ -1,8 +1,14 @@
 import ProfileLinkList from './components/ProfileLinkList'
 import Icon from './components/Icon'
 import './App.css'
+import { useWindowSize } from './utils/hooks/useWindowSize'
 
 function App() {
+  let infoText = '↓ Click the icon to explore more information. ↓'
+  if (useWindowSize().width <= 768) {
+    infoText = 'Tap the icon to explore more information.'
+  }
+
   return (
     <div className="">
       <main>
@@ -17,7 +23,7 @@ function App() {
           <h1>zzz' home</h1>
         </div>
         <div className="link-list">
-          <h3>↓ Click the icon to explore more information. ↓</h3>
+          <h3>{ infoText }</h3>
           <ProfileLinkList />
         </div>
       </main>
