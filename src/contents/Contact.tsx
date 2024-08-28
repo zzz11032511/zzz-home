@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 const markdownString = `
 # Contact
 
-色々書く予定
+fn.nk.2002□gmail.com (□ -> @)
 `
 
 function Contact() {
