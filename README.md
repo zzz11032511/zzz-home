@@ -1,3 +1,3 @@
 # zzz's home
 
-https://zzz-home.pages.dev/
+https://zzz-home.pages.dev

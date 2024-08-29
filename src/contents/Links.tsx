@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 const markdownString = `
 # Links
 
-- [ブログ](https://zzz-blog.netlify.app)
+- [ブログ](https://zzz-blog.pages.dev)
 - [GitHub](https://github.com/zzz11032511)
 - [Rate Your Music](https://rateyourmusic.com/~zzz11032511)
 - [Glitchwave](https://glitchwave.com/user/zzz11032511)

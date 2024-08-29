@@ -15,7 +15,7 @@ const profileLinkTemplate = [
   {
     src: '/favicon.ico',
     text: 'Blog',
-    href: 'https://zzz-blog.netlify.app',
+    href: 'https://zzz-blog.pages.dev',
     backgroundColor: '#fff4e8',
     color: '#000000',
   },
